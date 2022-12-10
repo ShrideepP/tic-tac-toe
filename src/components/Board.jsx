@@ -23,10 +23,12 @@ function Blocks() {
       if(blocks[win[0]].className.includes("blue") && blocks[win[1]].className.includes("blue") && blocks[win[2]].className.includes("blue")) {
         setBlueScore(prevScore => prevScore + 1);
         resetGame();
+        alert('Blue Won!!!');
       } else if(blocks[win[0]].className.includes("red") && blocks[win[1]].className.includes("red") && blocks[win[2]].className.includes("red")) {
         setRedScore(prevScore => prevScore + 1);
         resetGame();
-      };
+        alert('Red Won!!!');
+      }
     });
   };
 
