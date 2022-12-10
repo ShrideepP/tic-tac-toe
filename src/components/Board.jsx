@@ -22,8 +22,10 @@ function Blocks() {
     wins.forEach(win => {
       if(blocks[win[0]].className.includes("blue") && blocks[win[1]].className.includes("blue") && blocks[win[2]].className.includes("blue")) {
         setBlueScore(prevScore => prevScore + 1);
+        resetGame();
       } else if(blocks[win[0]].className.includes("red") && blocks[win[1]].className.includes("red") && blocks[win[2]].className.includes("red")) {
         setRedScore(prevScore => prevScore + 1);
+        resetGame();
       };
     });
   };
@@ -47,7 +49,7 @@ function Blocks() {
     };
   }, [playerTurn]);
 
-  function handleReset() {
+  function resetGame() {
     const blocks = blocksRef.current.children;
     for(let block of blocks) {
       block.className = "block";
@@ -68,7 +70,7 @@ function Blocks() {
       <div className='block'></div>
       <div className='block'></div>
     </div>
-    <Reset handleReset={ handleReset } />
+    <Reset handleReset={ resetGame } />
     </>
   );
 };
