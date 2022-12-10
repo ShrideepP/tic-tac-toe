@@ -1,0 +1,44 @@
+/* ----------
+   blue block
+   ---------- */
+.blue::before,
+.blue::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+}
+
+.blue::before {
+    height: 75%;
+    width: 75%;
+    background-color: #2563eb;
+}
+
+.blue::after {
+    height: 50%;
+    width: 50%;
+    background-color: #fff;
+}
+
+/* ---------
+   red block
+   --------- */
+.red::before,
+.red::after {
+    content: "";
+    position: absolute;
+    background-color: #ef4444;
+    transform-origin: center;
+}
+
+.red::before {
+    height: 75%;
+    width: 15%;
+    transform: rotate(45deg);
+}
+
+.red::after {
+    height: 75%;
+    width: 15%;
+    transform: rotate(-45deg);
+}
